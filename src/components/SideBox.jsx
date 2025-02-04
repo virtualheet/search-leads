@@ -1,6 +1,5 @@
 import React from 'react'
-
-// in this SideBox it start with form   foram contains form name input of applo link , input of number of leads , input of file anme  and a submit button
+import { IoIosArrowDown } from "react-icons/io";
 
 const SideBox = () => {
   return (
@@ -63,20 +62,33 @@ const SideBox = () => {
             >
               Number of Leads{"*"}
             </label>
-            <select
-              id="leads-count"
-              className='w-full bg-transparent font-semibold border border-[#E7E5E4] text-black/70 rounded-xl outline-none  focus:border-[#F28100] transition-colors appearance-none'
-              style={{
-                padding: 'clamp(0.5rem, 0.5vw, 1rem) clamp(0.5rem, 1vw, 1rem)',
-                fontSize: 'clamp(0.875rem, 1vw, 1rem)'
-              }}
-            >
-              <option defaultValue="100" disabled  className='text-black font-semibold'>Number of leads</option>
-              <option value="100">100 Leads</option>
-              <option value="200">200 Leads</option>
-              <option value="500">500 Leads</option>
-              <option value="1000">1000 Leads</option>
-            </select>
+            <div className="relative">
+              <select
+                id="leads-count"
+                className='w-full bg-transparent border border-[#E7E5E4] text-black/70 rounded-xl outline-none inter focus:border-[#F28100] appearance-none'
+                style={{
+                  padding: 'clamp(0.5rem, 0.5vw, 10rem) clamp(0.5rem, 1vw, 10rem)',
+                  paddingRight: 'clamp(2rem, 2.5vw, 3rem)',
+                  fontSize: 'clamp(0.875rem, 1vw, 1rem)'
+                }}
+              >
+                <option value="" defaultValue  className='text-black font-bold '>
+                  Number of leads
+                </option>
+                <option value="100">100 Leads</option>
+                <option value="200">200 Leads</option>
+                <option value="500">500 Leads</option>
+                <option value="1000">1000 Leads</option>
+              </select>
+              <div className="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none">
+                <IoIosArrowDown
+                  className="text-black/50"
+                  style={{
+                    fontSize: 'clamp(1rem, 1.25vw, 1.5rem)'
+                  }}
+                />
+              </div>
+            </div>
           </div>
 
           <div className="flex flex-col">

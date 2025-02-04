@@ -6,7 +6,7 @@ import { IoPerson } from "react-icons/io5";
 // in this navbar for every fontsize and gap size padding you have to use clamp for all the max limit of clamp for all is 200rem and always that propery use in style={{}} thats it.
 
 const Navbar = ({ credits }) => {
-    const totalCredits = 10000
+    const totalCredits = 8000
     const percentage = (credits / totalCredits) * 100
 
     return (
@@ -20,7 +20,7 @@ const Navbar = ({ credits }) => {
 
             <div className='flex items-center w-fit'
                 style={{
-                    gap: 'clamp(0.5rem, 0.5vw, 20rem)'
+                    gap: 'clamp(0.5rem, 0.75vw, 20rem)'
                 }}
             >
                 <div className='flex items-center '>
@@ -47,13 +47,12 @@ const Navbar = ({ credits }) => {
             </div>
             <div className='flex items-center h-full flex gap-4'
                 style={{
-                    gap: 'clamp(0.5rem, 0.5vw, 20rem)',
+                    gap: 'clamp(0.5rem, 0.75vw, 20rem)',
                     fontSize: 'clamp(0.5rem, 0.95vw, 20rem)'
                 }}
             >
 
-                {/* showing user credits with button and user profile icons with react icons */}
-                <button className='bg-white text-black rounded-xl font-medium flex items-center gap-2'
+                <button className='bg-white text-black rounded-xl font-medium flex items-center gap-1.5'
                     style={{
                         padding: 'clamp(0.25rem, 0.5vw, 20rem) clamp(0.5rem, 0.75vw, 20rem)',
                         minWidth: 'clamp(4rem, 5vw, 8rem)',
@@ -61,16 +60,16 @@ const Navbar = ({ credits }) => {
                         fontSize: 'clamp(0.875rem, 1vw, 1rem)'
                     }}
                 >
-                    <span className='font-extrabold'>
+                    <span className='font-bold'>
                         {credits}
                     </span>
                     <span>Credits</span>
                     <div 
                         className="circular-progress"
                         style={{
-                            width: 'clamp(1rem, 1.25vw, 2rem)',
-                            height: 'clamp(1rem, 1.25vw, 2rem)',
-                            background: `radial-gradient(closest-side, white 60%, transparent 61% 100%),
+                            width: 'clamp(1rem, 1.5vw, 2rem)',
+                            height: 'clamp(1rem, 1.5vw, 2rem)',
+                            background: `radial-gradient(closest-side, white 70%, transparent 71% 100%),
                                         conic-gradient(#F28100 ${percentage}%, #f4f4f4 0)`
                         }}
 

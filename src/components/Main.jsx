@@ -11,9 +11,8 @@ import {
     TableRow,
 } from "@/components/ui/table"
 import { FiArrowUpRight } from "react-icons/fi";
-import { ChevronLeft, ChevronRight, ChevronDown } from "lucide-react";
-
-import { IoIosArrowBack, IoIosSearch } from "react-icons/io";
+import { LuSearch } from "react-icons/lu";
+import { IoIosArrowBack } from "react-icons/io";
 import { IoIosArrowDown } from "react-icons/io";
 
 
@@ -56,8 +55,8 @@ const Main = () => {
                     </button>
                 </div>
              {/* saerch icons button */}
-             <button className='bg-white border border-black/30 aspect-square text-lg rounded-xl p-3 flex items-center space-x-2 transition-colors'>
-                <IoIosSearch className='text-black' />
+             <button className='bg-white border border-black/20 aspect-square text-xl rounded-xl p-3 flex items-center space-x-2 transition-colors'>
+                <LuSearch className='text-black' />
              </button>
 
             </div>
@@ -198,15 +197,15 @@ const Main = () => {
             </div>
 
             <div className="flex items-center fixed bottom-4 right-4 justify-center gap-2">
-                <button className="w-12 h-10 rounded-lg bg-white shadow-md hover:shadow-lg flex items-center justify-center">
+                <button className="w-12 h-10 rounded-xl bg-white shadow-md hover:shadow-lg flex items-center justify-center">
                     <IoIosArrowBack className="text-black"
                         style={{
-                            fontSize: 'clamp(1rem, 1.25vw, 1.5rem)'
+                            fontSize: 'clamp(1rem, 1.2vw, 1.5rem)'
                         }}
                     />
                 </button>
 
-                <button className="w-14 h-10 inter rounded-lg bg-white shadow-md hover:shadow-lg flex items-center justify-center gap-1">
+                <button className="w-14 h-10 inter rounded-xl bg-white shadow-md hover:shadow-lg flex items-center justify-center gap-1">
                     <span className="text-black"
                         style={{
                             fontSize: 'clamp(0.875rem, 1vw, 1.25rem)'
@@ -214,15 +213,15 @@ const Main = () => {
                     >1</span>
                     <IoIosArrowDown className="text-black "
                         style={{
-                            fontSize: 'clamp(1rem, 1.25vw, 1.5rem)'
+                            fontSize: 'clamp(1rem, 1.2vw, 1.5rem)'
                         }}
                     />
                 </button>
 
-                <button className="w-12 h-10 rounded-lg bg-white shadow-md hover:shadow-lg flex items-center justify-center">
+                <button className="w-12 h-10 rounded-xl bg-white shadow-md hover:shadow-lg flex items-center justify-center">
                     <IoIosArrowBack className="text-black rotate-180"
                         style={{
-                            fontSize: 'clamp(1rem, 1.25vw, 1.5rem)'
+                            fontSize: 'clamp(1rem, 1.2vw, 1.5rem)'
                         }}
                     />
                 </button>

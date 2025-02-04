@@ -14,7 +14,7 @@ export default function RootLayout({ children }) {
       <body
         className={` bg-[#FEF9F2] scrollbar-none antialiased`}
       >
-        {!isExamplePage && <Navbar credits={6500} />}
+        {!isExamplePage && <Navbar credits={5000} />}
         {children}
       </body>
     </html>
