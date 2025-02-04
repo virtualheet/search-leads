@@ -1,21 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@font-face {
+  font-family: 'Breadline Regular';
+  src: url('/fonts/Breadline Regular.ttf') format('woff2');
+}
+@font-face {
+  font-family: 'benjamin-kingdom';
+  src: url('/fonts/benjamin-kingdom.otf') format('woff2');
 }
 
-@media (prefers-color-scheme: dark) {
+
+
+*{
+  padding: 0;
+  margin: 0;
+  /* border:1px solid red */
+}
+
+.ibm {
+  font-family: "IBM Plex Sans", serif;
+}
+.dm {
+  font-family: "DM Sans", serif;
+}
+.ben {
+  font-family: "benjamin-kingdom", serif;
+}
+.bread {
+  font-family: "Breadline Regular", serif;
+}
+.inter {
+  font-family: "Inter", serif;
+}
+.man {
+  font-family: "Manrope", serif;
+}
+.pop {
+  font-family: "Poppins", serif;
+}
+
+
+.particle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background-color: white;
+  border-radius: 50%;
+  pointer-events: none;
+  /* Prevent interaction */
+}
+
+.relative {
+  position: relative;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+::selection{
+  background-color: #ffffff;
+  color: black;
+}
+
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --radius: 0.5rem;
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+.loading-sphere {
+  width: 16px;
+  height: 16px;
+  border: 2px solid #F5F5F4;
+  border-top: 2px solid #F49527;
+  border-radius: 70%;
+  position: relative;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes progress {
+    0% {
+        stroke-dasharray: 0 100;
+    }
+}
+
+circle {
+    animation: progress 1s ease-out forwards;
+    transform-origin: center;
+}
+
+.progress-ring {
+    transition: stroke-dashoffset 0.35s;
+    transform: rotate(-90deg);
+    transform-origin: 50% 50%;
+}
+
+@keyframes progress-fill {
+    0% {
+        stroke-dashoffset: 113.097; /* This is the circumference */
+    }
+}
+
+.progress-ring {
+    animation: progress-fill 1s ease-out forwards;
+}
+
+.progress-circle {
+    border-radius: 50%;
+    display: inline-block;
+    border: 3px solid #E7E5E4;
+    position: relative;
+}
+
+.progress-circle::before {
+    content: '';
+    position: absolute;
+    inset: -3px;
+    border-radius: 50%;
+    padding: 3px;
+    background: conic-gradient(#F28100 var(--progress), #E7E5E4 0);
+    -webkit-mask: 
+        linear-gradient(#fff 0 0) content-box, 
+        linear-gradient(#fff 0 0);
+    mask: 
+        linear-gradient(#fff 0 0) content-box, 
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+}
+
+.circular-progress {
+    border-radius: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
