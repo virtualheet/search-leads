@@ -16,7 +16,7 @@ const SideBoxBottom = () => {
         >
           <div className="flex flex-col">
             <div
-              className="text-black font-medium"
+              className="text-black font-bold tracking-tight"
               style={{
                 fontSize: 'clamp(0.75rem, 1.25vw, 100rem)',
                 marginBottom: 'clamp(0.25rem, 0.25vw, 0.5rem)'
