@@ -55,8 +55,8 @@ const Main = () => {
                     </button>
                 </div>
              {/* saerch icons button */}
-             <button className='bg-white border border-black/20 aspect-square text-xl rounded-xl p-3 flex items-center space-x-2 transition-colors'>
-                <LuSearch className='text-black' />
+             <button className='bg-white border border-black/10 aspect-square text-xl rounded-xl p-3 flex items-center transition-colors'>
+                <LuSearch className='text-black/60' />
              </button>
 
             </div>

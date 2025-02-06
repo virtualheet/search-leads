@@ -18,30 +18,31 @@
 *{
   padding: 0;
   margin: 0;
+  font-family: "Inter", serif;
   /* border:1px solid red */
 }
 
-.ibm {
+/* .ibm {
   font-family: "IBM Plex Sans", serif;
-}
+} */
 .dm {
   font-family: "DM Sans", serif;
 }
-.ben {
+/* .ben {
   font-family: "benjamin-kingdom", serif;
-}
+} */
 .bread {
   font-family: "Breadline Regular", serif;
 }
 .inter {
   font-family: "Inter", serif;
 }
-.man {
+/* .man {
   font-family: "Manrope", serif;
 }
 .pop {
   font-family: "Poppins", serif;
-}
+} */
 
 
 .particle {

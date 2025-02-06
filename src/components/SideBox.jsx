@@ -30,7 +30,7 @@ const SideBox = () => {
           <div className="flex flex-col">
             <label
               htmlFor="apollo-link"
-              className="text-black tracking-tighter font-semibold  "
+              className="text-black font-semibold  "
               style={{
                 fontSize: 'clamp(0.75rem, 0.85vw, 1rem)',
                 marginBottom: 'clamp(0.25rem, 0.25vw, 0.5rem)'
@@ -42,10 +42,11 @@ const SideBox = () => {
             <input
               id="apollo-link"
               type='text'
-              placeholder='Enter apollo link'
-              className='w-full bg-transparent border border-[#E7E5E4] text-black/70 rounded-lg outline-none  focus:border-[#F28100] transition-colors'
+              placeholder='https://app.apollo.io/#/people'
+              className='w-full bg-transparent border border-[#E7E5E4] text-black placeholder:text-black/50 placeholder:font-medium rounded-lg outline-none  focus:border-[#F28100] transition-colors'
               style={{
-                padding: 'clamp(0.5rem, 0.5vw, 1rem) clamp(0.5rem, 1vw, 1rem)',
+
+                padding: 'clamp(0.5rem, 0.5vw, 1rem) clamp(0.5rem, 0.8vw, 1rem)',
                 fontSize: 'clamp(0.875rem, 1vw, 1rem)'
               }}
             />
@@ -54,7 +55,7 @@ const SideBox = () => {
           <div className="flex flex-col">
             <label
               htmlFor="leads-count"
-              className="text-black tracking-tighter font-semibold  "
+              className="text-black  font-semibold  "
               style={{
                 fontSize: 'clamp(0.75rem, 0.85vw, 1rem)',
                 marginBottom: 'clamp(0.25rem, 0.25vw, 0.5rem)'
@@ -65,20 +66,20 @@ const SideBox = () => {
             <div className="relative">
               <select
                 id="leads-count"
-                className='w-full bg-transparent border border-[#E7E5E4] text-black/70 rounded-xl outline-none inter focus:border-[#F28100] appearance-none'
+                className='w-full bg-transparent border border-[#E7E5E4] text-black/70 rounded-xl outline-none inter focus:border-[#F28100] appearance-none font-semibold'
                 style={{
-                  padding: 'clamp(0.5rem, 0.5vw, 10rem) clamp(0.5rem, 1vw, 10rem)',
+                  padding: 'clamp(0.5rem, 0.5vw, 10rem) clamp(0.5rem, 0.8vw, 10rem)',
                   paddingRight: 'clamp(2rem, 2.5vw, 3rem)',
                   fontSize: 'clamp(0.875rem, 1vw, 1rem)'
                 }}
               >
-                <option value="" defaultValue  className='text-black font-bold '>
+                <option value=""   className='font-semibold text-black'>
                   Number of leads
                 </option>
-                <option value="100">100 Leads</option>
-                <option value="200">200 Leads</option>
-                <option value="500">500 Leads</option>
-                <option value="1000">1000 Leads</option>
+                <option value="100" className='font-medium text-black'>100 Leads</option>
+                <option value="200" className='font-medium text-black'>200 Leads</option>
+                <option value="500" className='font-medium text-black'>500 Leads</option>
+                <option value="1000" className='font-medium text-black'>1000 Leads</option>
               </select>
               <div className="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none">
                 <IoIosArrowDown
@@ -94,7 +95,7 @@ const SideBox = () => {
           <div className="flex flex-col">
             <label
               htmlFor="apollo-link"
-              className="text-black tracking-tight font-semibold  "
+              className="text-black  font-semibold  "
               style={{
                 fontSize: 'clamp(0.75rem, 0.85vw, 1rem)',
                 marginBottom: 'clamp(0.25rem, 0.25vw, 0.5rem)'
@@ -106,11 +107,11 @@ const SideBox = () => {
               id="apollo-link"
               type='text'
               placeholder='Leads to John Doe'
-              className='w-full bg-transparent border border-[#E7E5E4] text-black/70 rounded-xl outline-none  focus:border-[#F28100] transition-colors'
+              className='w-full bg-transparent border border-[#E7E5E4] text-black/70 placeholder:text-black/50 placeholder:font-medium rounded-xl outline-none  focus:border-[#F28100] transition-colors'
 
               style={{
                 padding: 'clamp(0.5rem, 0.5vw, 1rem) clamp(0.5rem, 1vw, 1rem)',
-                fontSize: 'clamp(0.875rem, 1vw, 1rem)'
+                fontSize: 'clamp(0.875rem, 0.8vw, 1rem)'
               }}
             />
           </div>
@@ -122,30 +123,30 @@ const SideBox = () => {
           padding: '0 clamp(1rem, 1vw, 2rem) clamp(1rem, 1vw, 2rem)'
         }}
       >
-      <div className="bg-[#F5F5F4] rounded-xl"
-     
-      >
-        <button
-          type='submit'
-          className='w-full bg-[#F28100] text-white font-medium rounded-xl transition-colors hover:bg-[#F28100]/90  '
-          style={{
-            padding: 'clamp(0.5rem, 0.75vw, 1rem) clamp(0.5rem, 1vw, 1rem)',
-            fontSize: 'clamp(0.875rem, 1vw, 1rem)',
-          }}
+        <div className="bg-[#F5F5F4] rounded-xl"
+
         >
-          Submit
-        </button>
-        <button
-          type='submit'
-          className='w-full font-medium text-[#A8A29A] rounded-xl   '
-          style={{
-            padding: 'clamp(0.5rem, 0.75vw, 1rem) clamp(0.5rem, 1vw, 1rem)',
-            fontSize: 'clamp(0.875rem, 1vw, 1rem)',
-          }}
-        >
-          {"-"}1000 Credits
-        </button>
-      </div>
+          <button
+            type='submit'
+            className='w-full bg-[#F28100] text-white font-medium rounded-xl transition-colors hover:bg-[#F28100]/90  '
+            style={{
+              padding: 'clamp(0.5rem, 0.75vw, 1rem) clamp(0.5rem, 1vw, 1rem)',
+              fontSize: 'clamp(0.875rem, 1vw, 1rem)',
+            }}
+          >
+            Submit
+          </button>
+          <button
+            type='submit'
+            className='w-full font-medium text-[#A8A29A] rounded-xl   '
+            style={{
+              padding: 'clamp(0.5rem, 0.75vw, 1rem) clamp(0.5rem, 1vw, 1rem)',
+              fontSize: 'clamp(0.875rem, 1vw, 1rem)',
+            }}
+          >
+            {"-"}1000 Credits
+          </button>
+        </div>
       </div>
     </div>
   )

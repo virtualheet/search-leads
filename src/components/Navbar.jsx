@@ -47,7 +47,7 @@ const Navbar = ({ credits }) => {
             </div>
             <div className='flex items-center h-full flex gap-4'
                 style={{
-                    gap: 'clamp(0.5rem, 0.75vw, 20rem)',
+                    gap: 'clamp(0.5rem, 0.5vw, 20rem)',
                     fontSize: 'clamp(0.5rem, 0.95vw, 20rem)'
                 }}
             >
@@ -67,9 +67,9 @@ const Navbar = ({ credits }) => {
                     <div 
                         className="circular-progress"
                         style={{
-                            width: 'clamp(1rem, 1.5vw, 2rem)',
-                            height: 'clamp(1rem, 1.5vw, 2rem)',
-                            background: `radial-gradient(closest-side, white 70%, transparent 71% 100%),
+                            width: 'clamp(1rem, 1.25vw, 2rem)',
+                            height: 'clamp(1rem, 1.25vw, 2rem)',
+                            background: `radial-gradient(closest-side, white 60%, transparent 61% 100%),
                                         conic-gradient(#F28100 ${percentage}%, #f4f4f4 0)`
                         }}
 

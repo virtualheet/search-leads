@@ -16,11 +16,13 @@ const Card = ({type,text}) => {
             }}
         >
             {/* Badge */}
-            <div className="bg-white absolute top-3 left-3 text-[#F28100] font-semibold px-4 py-1 rounded-full text-base w-fit shadow-sm flex items-center z-10">
+            <div className="bg-white absolute top-3 left-3 text-[#F28100] font-semibold px-4 py-1 rounded-full inter text-base w-fit shadow-sm flex items-center z-10"
+            style={{
+                fontSize: 'clamp(0.5rem, 0.85vw, 200rem)'
+            }}
+            >
                 <span
-                style={{
-                    fontSize: 'clamp(0.5rem, 1vw, 200rem)'
-                }}
+                
                 >{type}</span>
                 <span className="mx-1">•</span>
                 <span>3 Min read</span>
